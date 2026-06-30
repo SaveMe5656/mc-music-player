@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Minecraft Music Player</title>
+	<link rel="shortcut icon" href="assets/icon.png">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<span id="loading">Loading...</span>
+	<main style="display:none">
+	</main>
+</body>
+
+<script>
+	// auto-resize page
+	(
+		window.onresize = function () {
+			document.documentElement.style.setProperty(
+				"--scale-modifier",
+				Math.round(window.innerWidth / 640) || 1
+			);
+		}
+	)();
+</script>
+<script src="main.js"></script>
+
+</html>

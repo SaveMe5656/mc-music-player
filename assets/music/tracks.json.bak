@@ -1,0 +1,997 @@
+{
+	"albums": {
+		"Alpha": "alpha.png",
+		"Beta": "beta.png",
+		"Update Aquatic": {
+			"Axolotl": "update_aquatic/axolotl.png",
+			"Dragon Fish": "update_aquatic/dragon_fish.png",
+			"Shuniji": "update_aquatic/shuniji.png"
+		},
+		"Nether Update": "nether_update.png",
+		"Caves & Cliffs": "caves_and_cliffs.png",
+		"The Wild Update": "wild_update.png",
+		"Trails & Tales": "trails_and_tales.png",
+		"Tricky Trials": "tricky_trials.png",
+		"Chase the Skies": "chase_the_skies.jpeg",
+		"Chaos Cubed": "chaos_cubed.png"
+	},
+	"tracks": {
+		"a_familiar_room.ogg": {
+			"name": "A Familiar Room",
+			"album": "Trails & Tales",
+			"tags": [
+				"creative_j",
+				"survival"
+			],
+			"path": "game"
+		},
+		"aerie.ogg": {
+			"name": "Aerie",
+			"album": "The Wild Update",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"forest",
+				"lush_caves",
+				"old_growth_taiga",
+				"swamp"
+			],
+			"path": "game/swamp"
+		},
+		"alpha.ogg": {
+			"name": "Alpha",
+			"album": "Beta",
+			"tags": [
+				"credits"
+			],
+			"path": "game/end"
+		},
+		"an_ordinary_day.ogg": {
+			"name": "An Ordinary Day",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"lush_caves",
+				"snowy_slopes",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"ancestry.ogg": {
+			"name": "Ancestry",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"deep_dark"
+			],
+			"path": "game"
+		},
+		"aria_math.ogg": {
+			"name": "Aria Math",
+			"album": "Beta",
+			"tags": [
+				"creative"
+			],
+			"path": "game/creative"
+		},
+		"axolotl.ogg": {
+			"name": "Axolotl",
+			"album": "Update Aquatic",
+			"tags": [
+				"water"
+			],
+			"biomes": [
+				"under_water"
+			],
+			"path": "game/water"
+		},
+		"ballad_of_the_cats.ogg": {
+			"name": "Ballad of the Cats",
+			"album": "Beta",
+			"tags": [
+				"nether"
+			],
+			"biomes": [
+				"basalt_deltas",
+				"nether_wastes",
+				"soulsand_valley",
+				"crimson_forest"
+			],
+			"path": "game/nether"
+		},
+		"beginning_2.ogg": {
+			"name": "Beginning 2",
+			"album": "Beta",
+			"tags": [
+				"menu"
+			],
+			"path": "menu"
+		},
+		"below_and_above.ogg": {
+			"name": "Below and Above",
+			"album": "Chase the Skies",
+			"tags": [
+				"creative_j",
+				"overworld",
+				"survival"
+			],
+			"biomes": [
+				"cherry_grove"
+			],
+			"path": "game"
+		},
+		"biome_fest.ogg": {
+			"name": "Biome Fest",
+			"album": "Beta",
+			"tags": [
+				"creative"
+			],
+			"path": "game/creative"
+		},
+		"blind_spots.ogg": {
+			"name": "Blind Spots",
+			"album": "Beta",
+			"tags": [
+				"creative"
+			],
+			"path": "game/creative"
+		},
+		"boss.ogg": {
+			"name": "Boss",
+			"tags": [
+				"end",
+				"dragon"
+			],
+			"path": "game/end"
+		},
+		"broken_clocks.ogg": {
+			"name": "Broken Clocks",
+			"album": "Chase the Skies",
+			"tags": [
+				"creative_j",
+				"overworld",
+				"survival"
+			],
+			"biomes": [
+				"forest"
+			],
+			"path": "game"
+		},
+		"bromeliad.ogg": {
+			"name": "Bromeliad",
+			"album": "Trails & Tales",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"bamboo_jungle",
+				"cherry_grove",
+				"flower_forest",
+				"forest",
+				"jungle",
+				"sparse_jungle"
+			],
+			"path": "game"
+		},
+		"chrysopoeia.ogg": {
+			"name": "Chrysopoeia",
+			"album": "Nether Update",
+			"tags": [
+				"nether"
+			],
+			"biomes": [
+				"crimson_forest"
+			],
+			"path": "game/nether/crimson_forest"
+		},
+		"clark.ogg": {
+			"name": "Clark",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [],
+			"path": "game"
+		},
+		"comforting_memories.ogg": {
+			"name": "Comforting Memories",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"forest",
+				"grove",
+				"old_growth_taiga"
+			],
+			"path": "game"
+		},
+		"concrete_halls.ogg": {
+			"name": "Concrete Halls",
+			"album": "Beta",
+			"tags": [
+				"nether"
+			],
+			"biomes": [
+				"basalt_deltas",
+				"nether_wastes",
+				"soulsand_valley",
+				"crimson_forest"
+			],
+			"path": "game/nether"
+		},
+		"crescent_dunes.ogg": {
+			"name": "Crescent Dunes",
+			"album": "Trails & Tales",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"badlands",
+				"desert"
+			],
+			"path": "game"
+		},
+		"danny.ogg": {
+			"name": "Danny",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"desert",
+				"dripstone_caves",
+				"flower_forest",
+				"forest",
+				"frozen_peaks",
+				"jungle",
+				"meadow",
+				"old_growth_taiga",
+				"sparse_jungle",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"dead_voxel.ogg": {
+			"name": "Dead Voxel",
+			"album": "Beta",
+			"tags": [
+				"nether"
+			],
+			"biomes": [
+				"basalt_deltas",
+				"nether_wastes",
+				"soulsand_valley",
+				"crimson_forest"
+			],
+			"path": "game/nether"
+		},
+		"deeper.ogg": {
+			"name": "Deeper",
+			"album": "Tricky Trials",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"deep_dark",
+				"dripstone_caves",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"dragon_fish.ogg": {
+			"name": "Dragon Fish",
+			"album": "Update Aquatic",
+			"tags": [
+				"water"
+			],
+			"biomes": [
+				"under_water"
+			],
+			"path": "game/water"
+		},
+		"dreiton.ogg": {
+			"name": "Dreiton",
+			"album": "Beta",
+			"tags": [
+				"creative"
+			],
+			"path": "game/creative"
+		},
+		"dry_hands.ogg": {
+			"name": "Dry Hands",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"forest",
+				"frozen_peaks",
+				"jagged_peaks",
+				"jungle",
+				"old_growth_taiga",
+				"sparse_jungle",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"ebb.ogg": {
+			"name": "Ebb",
+			"album": "Chaos Cubed",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"frozen_peaks",
+				"jagged_peaks",
+				"sulfur_caves",
+				"swamp"
+			],
+			"path": "game"
+		},
+		"echo_in_the_wind.ogg": {
+			"name": "Echo in the Wind",
+			"album": "Trails & Tales",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"badlands",
+				"cherry_grove",
+				"flower_forest",
+				"lush_caves"
+			],
+			"path": "game"
+		},
+		"eld_unknown.ogg": {
+			"name": "Eld Unknown",
+			"album": "Tricky Trials",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"grove",
+				"jagged_peaks",
+				"stony_peaks",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"endless.ogg": {
+			"name": "Endless",
+			"album": "Tricky Trials",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"grove",
+				"jagged_peaks",
+				"stony_peaks",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"featherfall.ogg": {
+			"name": "Featherfall",
+			"album": "Tricky Trials",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"cherry_grove",
+				"flower_forest",
+				"lush_caves"
+			],
+			"path": "game"
+		},
+		"firebugs.ogg": {
+			"name": "Firebugs",
+			"album": "The Wild Update",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"forest",
+				"lush_caves",
+				"old_growth_taiga",
+				"swamp"
+			],
+			"path": "game/swamp"
+		},
+		"fireflies.ogg": {
+			"name": "Fireflies",
+			"album": "Chase the Skies",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"desert"
+			],
+			"path": "game"
+		},
+		"floating_dream.ogg": {
+			"name": "Floating Dream",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"forest",
+				"jagged_peaks",
+				"lush_caves",
+				"old_growth_taiga"
+			],
+			"path": "game"
+		},
+		"floating_trees.ogg": {
+			"name": "Floating Trees",
+			"album": "Beta",
+			"tags": [
+				"menu"
+			],
+			"path": "menu"
+		},
+		"haggstrom.ogg": {
+			"name": "Haggstrom",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"desert",
+				"flower_forest",
+				"forest",
+				"frozen_peaks",
+				"jungle",
+				"meadow",
+				"old_growth_taiga",
+				"snowy_slopes",
+				"sparse_jungle",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"haunt_muskie.ogg": {
+			"name": "Haunt Muskie",
+			"album": "Beta",
+			"tags": [
+				"creative"
+			],
+			"path": "game/creative"
+		},
+		"home.ogg": {
+			"name": "Home",
+			"album": "Chaos Cubed",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"bamboo_jungle",
+				"cherry_grove",
+				"frozen_peaks",
+				"jungle",
+				"meadow",
+				"sparse_jungle"
+			],
+			"path": "game"
+		},
+		"infinite_amethyst.ogg": {
+			"name": "Infinite Amethyst",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"key.ogg": {
+			"name": "Key",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"desert",
+				"dripstone_caves",
+				"flower_forest",
+				"forest",
+				"grove",
+				"jagged_peaks",
+				"jungle",
+				"old_growth_taiga",
+				"sparse_jungle"
+			],
+			"path": "game"
+		},
+		"komorebi.ogg": {
+			"name": "komorebi",
+			"album": "Tricky Trials",
+			"tags": [
+				"survival",
+				"creative_j"
+			],
+			"path": "game"
+		},
+		"labyrinthine.ogg": {
+			"name": "Labyrinthine",
+			"album": "The Wild Update",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"forest",
+				"lush_caves",
+				"old_growth_taiga",
+				"swamp"
+			],
+			"path": "game/swamp"
+		},
+		"left_to_bloom.ogg": {
+			"name": "Left to Bloom",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"bamboo_jungle",
+				"cherry_grove",
+				"flower_forest",
+				"forest",
+				"jungle",
+				"lush_caves",
+				"meadow",
+				"old_growth_taiga",
+				"sparse_jungle"
+			],
+			"path": "game"
+		},
+		"lilypad.ogg": {
+			"name": "Lilypad",
+			"album": "Chase the Skies",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"frozen_peaks",
+				"grove"
+			],
+			"path": "game"
+		},
+		"living_mice.ogg": {
+			"name": "Living Mice",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"desert",
+				"flower_forest",
+				"forest",
+				"frozen_peaks",
+				"jagged_peaks",
+				"jungle",
+				"meadow",
+				"old_growth_taiga",
+				"snowy_slopes",
+				"sparse_jungle",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"memories.ogg": {
+			"name": "Memories",
+			"album": "Chaos Cubed",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"cherry_grove",
+				"desert",
+				"flower_forest",
+				"forest"
+			],
+			"path": "game"
+		},
+		"mice_on_venus.ogg": {
+			"name": "Mice on Venus",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"forest",
+				"frozen_peaks",
+				"grove",
+				"jagged_peaks",
+				"jungle",
+				"lush_caves",
+				"old_growth_taiga",
+				"sparse_jungle",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"minecraft.ogg": {
+			"name": "Minecraft",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"cherry_grove",
+				"forest",
+				"grove",
+				"lush_caves",
+				"old_growth_taiga"
+			],
+			"path": "game"
+		},
+		"moog_city_2.ogg": {
+			"name": "Moog City 2",
+			"album": "Beta",
+			"tags": [
+				"menu"
+			],
+			"path": "menu"
+		},
+		"mutation.ogg": {
+			"name": "Mutation",
+			"album": "Beta",
+			"tags": [
+				"menu"
+			],
+			"path": "menu"
+		},
+		"nightly.ogg": {
+			"name": "Nightly",
+			"album": "Chaos Cubed",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"cherry_grove",
+				"dripstone_caves",
+				"frozen_peaks",
+				"jagged_peaks",
+				"snowy_slopes",
+				"stony_peaks",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"one_more_day.ogg": {
+			"name": "One More Day",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"desert",
+				"forest",
+				"lush_caves",
+				"meadow",
+				"old_growth_taiga",
+				"snowy_slopes"
+			],
+			"path": "game"
+		},
+		"os_piano.ogg": {
+			"name": "O's Piano",
+			"album": "Chase the Skies",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"lush_caves"
+			],
+			"path": "game"
+		},
+		"oxygene.ogg": {
+			"name": "Oxyg\u00e8ne",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"desert",
+				"dripstone_caves",
+				"flower_forest",
+				"forest",
+				"grove",
+				"jagged_peaks",
+				"jungle",
+				"old_growth_taiga",
+				"sparse_jungle"
+			],
+			"path": "game"
+		},
+		"pokopoko.ogg": {
+			"name": "pokopoko",
+			"album": "Tricky Trials",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"grove",
+				"jagged_peaks",
+				"snowy_slopes",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"puzzlebox.ogg": {
+			"name": "Puzzlebox",
+			"album": "Tricky Trials",
+			"tags": [
+				"survival",
+				"creative_j"
+			],
+			"path": "game"
+		},
+		"rubedo.ogg": {
+			"name": "Rubedo",
+			"album": "Nether Update",
+			"tags": [],
+			"biomes": [],
+			"path": "game/nether/nether_wastes"
+		},
+		"shores.ogg": {
+			"name": "Shores",
+			"album": "Chaos Cubed",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"flower_forest",
+				"forest",
+				"grove",
+				"lush_caves",
+				"old_growth_taiga",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"shuniji.ogg": {
+			"name": "Shuniji",
+			"album": "Update Aquatic",
+			"tags": [
+				"water"
+			],
+			"biomes": [
+				"under_water"
+			],
+			"path": "game/water"
+		},
+		"so_below.ogg": {
+			"name": "So Below",
+			"album": "Nether Update",
+			"tags": [
+				"nether"
+			],
+			"biomes": [
+				"basalt_deltas",
+				"soulsand_valley"
+			],
+			"path": "game/nether/soulsand_valley"
+		},
+		"stand_tall.ogg": {
+			"name": "Stand Tall",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"frozen_peaks",
+				"jagged_peaks",
+				"snowy_slopes",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"subwoofer_lullaby.ogg": {
+			"name": "Subwoofer Lullaby",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"desert",
+				"dripstone_caves",
+				"flower_forest",
+				"forest",
+				"frozen_peaks",
+				"jagged_peaks",
+				"jungle",
+				"meadow",
+				"old_growth_taiga",
+				"snowy_slopes",
+				"sparse_jungle",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"sweden.ogg": {
+			"name": "Sweden",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"cherry_grove",
+				"forest",
+				"grove",
+				"lush_caves",
+				"old_growth_taiga"
+			],
+			"path": "game"
+		},
+		"taswell.ogg": {
+			"name": "Taswell",
+			"album": "Beta",
+			"tags": [
+				"creative"
+			],
+			"path": "game/creative"
+		},
+		"the_end.ogg": {
+			"name": "The End",
+			"album": "Beta",
+			"tags": [
+				"end"
+			],
+			"biomes": [
+				"end"
+			],
+			"path": "game/end"
+		},
+		"warmth.ogg": {
+			"name": "Warmth",
+			"album": "Beta",
+			"tags": [
+				"nether"
+			],
+			"biomes": [
+				"basalt_deltas",
+				"nether_wastes",
+				"soulsand_valley",
+				"crimson_forest"
+			],
+			"path": "game/nether"
+		},
+		"watcher.ogg": {
+			"name": "Watcher",
+			"album": "Tricky Trials",
+			"tags": [
+				"survival",
+				"creative_j"
+			],
+			"path": "game"
+		},
+		"wending.ogg": {
+			"name": "Wending",
+			"album": "Caves & Cliffs",
+			"tags": [
+				"overworld"
+			],
+			"biomes": [
+				"dripstone_caves",
+				"grove",
+				"jagged_peaks",
+				"stony_peaks",
+				"sulfur_caves"
+			],
+			"path": "game"
+		},
+		"wet_hands.ogg": {
+			"name": "Wet Hands",
+			"album": "Alpha",
+			"tags": [
+				"survival",
+				"overworld",
+				"creative_j"
+			],
+			"biomes": [
+				"badlands",
+				"bamboo_jungle",
+				"forest",
+				"frozen_peaks",
+				"jagged_peaks",
+				"jungle",
+				"old_growth_taiga",
+				"sparse_jungle",
+				"stony_peaks"
+			],
+			"path": "game"
+		},
+		"yakusoku.ogg": {
+			"name": "yakusoku",
+			"album": "Tricky Trials",
+			"tags": [
+				"survival",
+				"creative_j"
+			],
+			"path": "game"
+		}
+	}
+}

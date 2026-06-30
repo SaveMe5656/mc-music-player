@@ -1,0 +1,99 @@
+@font-face {
+	font-family: mojangles;
+	src: url("assets/fonts/MinecraftDefault-Regular.ttf");
+}
+
+:root {
+	--scale-modifier: 1;
+
+	image-rendering: pixelated;
+
+	font-family: mojangles;
+	font-size: calc(12px * var(--scale-modifier));
+	text-shadow: 0.1em 0.1em var(--text-shadow-color);
+	text-align: center;
+}
+
+body,
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+body,
+div:not(.invisible),
+.background {
+	background-image: linear-gradient(#00000080), url("assets/dirt.png");
+	background-size: calc(32px * var(--scale-modifier));
+}
+
+body {
+	height: 100vh;
+}
+
+div:not(.invisible) {
+	padding: calc(2px * var(--scale-modifier));
+	margin: calc(2px * var(--scale-modifier));
+}
+
+div:not(.invisible),
+.bordered {
+	border: calc(1px * var(--scale-modifier)) solid #ffffff80;
+	box-shadow:
+		calc(1px * var(--scale-modifier)) calc(1px * var(--scale-modifier)) #00000080,
+		calc(1px * var(--scale-modifier)) calc(1px * var(--scale-modifier)) inset #00000080;
+}
+
+:root,
+.text-normal {
+	color: #fbfbfb;
+	--text-shadow-color: #3e3e3e;
+}
+
+.text-minor {
+	color: #aaa;
+	--text-shadow-color: #2a2a2a;
+}
+
+input[type="range"] {
+	appearance: none;
+	-webkit-appearance: none;
+	background-image: url("assets/player/slider.png");
+	background-size: cover;
+	width: calc(100px * var(--scale-modifier));
+	height: calc(10px * var(--scale-modifier));
+	cursor: pointer;
+}
+
+input[type="range"]:active {
+	cursor: ew-resize;
+}
+
+input[type="range"]:hover {
+	background-image: url("assets/player/slider_highlighted.png");
+}
+
+input[type="range"]::-moz-range-thumb {
+	border: none;
+	border-radius: 0;
+	background-image: url("assets/player/slider_handle.png");
+	background-size: cover;
+	width: calc(7px * var(--scale-modifier));
+	height: calc(10px * var(--scale-modifier));
+}
+
+input[type="range"]::-webkit-slider-thumb {
+	border: none;
+	border-radius: 0;
+	background-image: url("assets/player/slider_handle.png");
+	background-size: cover;
+	width: calc(7px * var(--scale-modifier));
+	height: calc(10px * var(--scale-modifier));
+}
+
+.img-small-button {
+	cursor: pointer;
+	height: calc(6px*var(--scale-modifier));
+}
