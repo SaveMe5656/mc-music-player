@@ -8,7 +8,7 @@ const click = new Audio("assets/click.mp3");
 /** music JSON metadata @type {object} */
 let trackMeta;
 /** track exclusivity tags */
-let tags;// = [ "menu", "Chaos Cubed" ];
+let tags;
 
 // setup function
 async function setup() {
@@ -81,16 +81,12 @@ function main() {
 		this.value = (this.value + 1) & 1;
 		this.src = 'assets/tagMode-' + this.value + '.png';
 
+		if (this.value) tags = undefined;
+		else tags = ["menu", "Chaos Cubed"];
+
 		if (init != 1) {
-			if (this.value) {
-				tags = undefined;
-				while (player.controls.playbackType.value != 2)
-					player.controls.playbackType.onclick();
-			} else {
-				tags = ["menu", "Chaos Cubed"];
-				while (player.controls.playbackType.value != 0)
-					player.controls.playbackType.onclick();
-			}
+			while (player.controls.playbackType.value != (this.value - 1) * 2)
+				player.controls.playbackType.onclick();
 
 			await playNext(); player.audio.pause();
 		}
