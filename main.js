@@ -81,17 +81,15 @@ function main() {
 		this.value = (this.value + 1) & 1;
 		this.src = 'assets/tagMode-' + this.value + '.png';
 
-		if (this.value) tags = undefined;
-		else tags = ["menu", "Chaos Cubed"];
+		if (this.value) tags = ["menu", "Chaos Cubed"];
+		else tags = undefined;
 
 		if (init != 1) {
-			while (player.controls.playbackType.value != (this.value - 1) * 2)
+			while (player.controls.playbackType.value != (this.value - 1) * -2)
 				player.controls.playbackType.onclick();
 
 			await playNext(); player.audio.pause();
 		}
-		else while (player.controls.playbackType.value != 1)
-			player.controls.playbackType.onclick();
 
 	};
 	document.getElementById("temp-tagSwitcher").onclick(1);
