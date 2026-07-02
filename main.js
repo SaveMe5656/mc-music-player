@@ -50,10 +50,7 @@ function main() {
 		.forEach(element => element.addEventListener("click", () => { click.currentTime = 0; click.play(); }));
 
 	// init audio playback scrubber
-	player.controls.scrubber.max
-		= (parseInt(getComputedStyle(player.controls.scrubber).width)
-			- parseInt(getComputedStyle(player.controls.scrubber, "::-moz-range-thumb").width)
-		) / parseInt(getComputedStyle(player.controls.scrubber).getPropertyValue("--scale-modifier"));
+	player.controls.scrubber.max = 100 - 7;
 
 	// init play/pause button
 	player.audio.onplay = () => player.controls.playbackToggle.src = "assets/player/pause.png";

@@ -87,6 +87,8 @@ input.player-duration::-moz-range-thumb {
 }
 
 input.player-duration::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
 	border: none;
 	border-radius: 0;
 	background-image: url("assets/player/slider_handle.png");
