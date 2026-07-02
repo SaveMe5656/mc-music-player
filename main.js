@@ -8,24 +8,23 @@ const click = new Audio("assets/click.mp3");
 /** music JSON metadata @type {object} */
 let trackMeta;
 /** track exclusivity tags */
-let tags = [
-	// temporary values
-	"menu",
-	"Chaos Cubed"
-];
+let tags;// = [ "menu", "Chaos Cubed" ];
 
 // setup function
 async function setup() {
 	// fetch track metadata from JSON
-	await fetch('./assets/music/tracks.json')
-		.then(response => { return response.json(); })
-		.then(data => trackMeta = data);
+	trackMeta = await fetch('assets/music/tracks.json')
+		.then(response => response.json());
+
+	// fetch new <main> code
+	player.html = await fetch("assets/player.html")
+		.then(response => response.text());
 }
 
 // main function
 function main() {
 	// init document body
-	document.querySelector("main").innerHTML = `<div style="display:inline-block"><span><img id="track-album-cover" src style="height:calc(18px*var(--scale-modifier));image-rendering:pixelated" onerror="this.src='assets/music/covers/undefined.png'"> <div id="track-label" style="display:inline-block;text-align:left" class="invisible"><span id="track-title">Loading...</span><br><span class="text-minor"><span id="track-artist">???</span> - <span id="track-album-title">???</span></span></div></span></div><br><input id="player-scrubber" type="range" max="1" title></input><br><img id="player-restartTrack" class="img-small-button" src="assets/player/restartTrack.png"> <img id="player-playbackToggle" class="img-small-button" src="assets/player/play.png"> <img id="player-playNext" class="img-small-button" src="assets/player/playNext.png" onclick="playNext()"> <img id="player-playbackType" class="img-small-button" onclick="this.value>0||(this.value=3);this.value--;this.src='assets/player/playback-'+this.value+'.png'"> <span id=player-currentTime>-:--</span>/<span id=player-duration>-:--</span><br><br><span>More to come soon,<br>check back later!</span>`;
+	document.querySelector("main").innerHTML = player.html;
 
 	// finish music player setup
 	player = {
@@ -44,26 +43,29 @@ function main() {
 			restartTrack: document.getElementById("player-restartTrack"),
 			playbackType: document.getElementById("player-playbackType")
 		}
-	}
-
-	// init audio playback scrubber
-	player.controls.scrubber.step = Math.floor(
-		1
-		/ (
-			parseInt(getComputedStyle(player.controls.scrubber).width)
-			- parseInt(getComputedStyle(player.controls.scrubber, "::-moz-range-thumb").width)
-		)
-		* parseInt(getComputedStyle(player.controls.scrubber).getPropertyValue("--scale-modifier"))
-		* 1e5
-	) / 1e5;
+	};
 
 	// enable click sound for interactable page elements
-	[...document.querySelectorAll("input[type='range']"), ...document.querySelectorAll(".img-small-button")]
+	[...document.querySelectorAll("input[type='range']"), ...document.querySelectorAll(".img-small-button"), document.getElementById("temp-tagSwitcher")]
 		.forEach(element => element.addEventListener("click", () => { click.currentTime = 0; click.play(); }));
+
+	// init audio playback scrubber
+	player.controls.scrubber.max
+		= (parseInt(getComputedStyle(player.controls.scrubber).width)
+			- parseInt(getComputedStyle(player.controls.scrubber, "::-moz-range-thumb").width)
+		) / parseInt(getComputedStyle(player.controls.scrubber).getPropertyValue("--scale-modifier"));
+
+	// init play/pause button
+	player.audio.onplay = () => player.controls.playbackToggle.src = "assets/player/pause.png";
+	player.audio.onpause = () => player.controls.playbackToggle.src = "assets/player/play.png";
 
 	// init audio playback sync to custom player
 	player.audio.ontimeupdate = () => {
-		player.controls.scrubber.value = player.audio.currentTime / player.audio.duration;
+		// synchronize scrubber position
+		player.controls.scrubber.value = player.audio.currentTime
+			? player.controls.scrubber.max * player.audio.currentTime / player.audio.duration
+			: 0;
+		// update time parameters
 		for (let i of ["currentTime", "duration"]) {
 			const element = player.controls[i],
 				timestamp = player.audio[i];
@@ -73,6 +75,30 @@ function main() {
 				+ Math.floor(timestamp - (Math.floor(timestamp / 60) * 60)).toString().padStart(2, 0);
 		};
 	};
+
+	// init temporary tag switcher
+	document.getElementById("temp-tagSwitcher").onclick = async function (init) {
+		this.value = (this.value + 1) & 1;
+		this.src = 'assets/tagMode-' + this.value + '.png';
+
+		if (init != 1) {
+			if (this.value) {
+				tags = undefined;
+				while (player.controls.playbackType.value != 2)
+					player.controls.playbackType.onclick();
+			} else {
+				tags = ["menu", "Chaos Cubed"];
+				while (player.controls.playbackType.value != 0)
+					player.controls.playbackType.onclick();
+			}
+
+			await playNext(); player.audio.pause();
+		}
+		else while (player.controls.playbackType.value != 1)
+			player.controls.playbackType.onclick();
+
+	};
+	document.getElementById("temp-tagSwitcher").onclick(1);
 
 	// init audio autoplay
 	player.audio.onended = () => {
@@ -108,16 +134,12 @@ function main() {
 
 async function playNext() {
 	// enable player controls
-	player.controls.scrubber.onchange = () => player.audio.currentTime = player.controls.scrubber.value * player.audio.duration;
+	player.controls.scrubber.onchange = () => player.audio.currentTime = player.controls.scrubber.value / player.controls.scrubber.max * player.audio.duration;
 	player.controls.playbackToggle.onclick = function (forcePlay) {
-		this.src = "assets/player/";
-		if (player.audio.paused || forcePlay == 1) {
+		if (player.audio.paused || forcePlay == 1)
 			player.audio.play();
-			this.src += "pause.png";
-		} else {
+		else
 			player.audio.pause();
-			this.src += "play.png";
-		}
 	};
 	player.controls.restartTrack.onclick = () => {
 		player.audio.currentTime = 0;
@@ -130,7 +152,7 @@ async function playNext() {
 		track = trackMeta.tracks[Math.floor(Math.random() * trackMeta.tracks.length)];
 	}
 	// retry if track doesn't match given parameters
-	while (!tags.some(element => [track.title, track.artist, track.album, ...(track.tags || []), ...(track.biomes || [])].includes(element)));
+	while (Array.isArray(tags) && tags.length != 0 && !tags.some(element => [track.title, track.artist, track.album, ...(track.tags || []), ...(track.biomes || [])].includes(element)));
 
 	// update audio element
 	player.audio.src = "assets/music/" + track.path

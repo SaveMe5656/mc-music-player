@@ -15,35 +15,37 @@
 }
 
 body,
-div {
+div.format,
+.boxed {
+	background-image: linear-gradient(#00000080), url("assets/dirt.png");
+	background-size: calc(32px * var(--scale-modifier));
+}
+
+body,
+div.format {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
-body,
-div:not(.invisible),
-.background {
-	background-image: linear-gradient(#00000080), url("assets/dirt.png");
-	background-size: calc(32px * var(--scale-modifier));
-}
-
 body {
 	height: 100vh;
 }
 
-div:not(.invisible) {
-	padding: calc(2px * var(--scale-modifier));
-	margin: calc(2px * var(--scale-modifier));
-}
-
-div:not(.invisible),
-.bordered {
+div.format,
+.bordered,
+.boxed {
 	border: calc(1px * var(--scale-modifier)) solid #ffffff80;
 	box-shadow:
 		calc(1px * var(--scale-modifier)) calc(1px * var(--scale-modifier)) #00000080,
 		calc(1px * var(--scale-modifier)) calc(1px * var(--scale-modifier)) inset #00000080;
+}
+
+div.format,
+.boxed {
+	padding: calc(2px * var(--scale-modifier));
+	margin: calc(2px * var(--scale-modifier));
 }
 
 :root,
@@ -57,7 +59,7 @@ div:not(.invisible),
 	--text-shadow-color: #2a2a2a;
 }
 
-input[type="range"] {
+input.player-duration {
 	appearance: none;
 	-webkit-appearance: none;
 	background-image: url("assets/player/slider.png");
@@ -67,15 +69,15 @@ input[type="range"] {
 	cursor: pointer;
 }
 
-input[type="range"]:active {
+input.player-duration:active {
 	cursor: ew-resize;
 }
 
-input[type="range"]:hover {
+input.player-duration:hover {
 	background-image: url("assets/player/slider_highlighted.png");
 }
 
-input[type="range"]::-moz-range-thumb {
+input.player-duration::-moz-range-thumb {
 	border: none;
 	border-radius: 0;
 	background-image: url("assets/player/slider_handle.png");
@@ -84,7 +86,7 @@ input[type="range"]::-moz-range-thumb {
 	height: calc(10px * var(--scale-modifier));
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input.player-duration::-webkit-slider-thumb {
 	border: none;
 	border-radius: 0;
 	background-image: url("assets/player/slider_handle.png");
@@ -96,4 +98,13 @@ input[type="range"]::-webkit-slider-thumb {
 .img-small-button {
 	cursor: pointer;
 	height: calc(6px*var(--scale-modifier));
+}
+
+#temp-tagSwitcher {
+	height: calc(10px * var(--scale-modifier));
+	border: calc(1px * var(--scale-modifier)) solid #1e1e1f;
+}
+
+#temp-tagSwitcher:hover {
+	border-color: #e1e1e0;
 }

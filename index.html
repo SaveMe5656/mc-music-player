@@ -20,7 +20,7 @@
 		window.onresize = function () {
 			document.documentElement.style.setProperty(
 				"--scale-modifier",
-				Math.round(window.innerWidth / 640) || 1
+				Math.round(window.innerWidth * window.innerHeight / 48e4) || 1
 			);
 		}
 	)();

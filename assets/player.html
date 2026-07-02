@@ -1,0 +1,35 @@
+<!--div class="boxed"-->
+  <div id="track" class="boxed"
+    style="display: inline-block; width:calc(200px * var(--scale-modifier)); text-align: left;">
+    <img id="track-album-cover"
+      style="height: calc(18px * var(--scale-modifier)); padding-left: calc(2px * var(--scale-modifier))"
+      onerror="this.src = 'assets/music/covers/undefined.png';">
+    <div id="track-label" style="display: inline-block;">
+      <span id="track-title">Loading...</span>
+      <br>
+      <span id="track-minorDetails" class="text-minor">
+        <span id="track-artist">???</span> - <span id="track-album-title">???</span>
+      </span>
+    </div>
+  </div>
+  <br>
+  <div id="player" style="display: inline-block">
+    <input id="player-scrubber" type="range" class="player-duration" value="0" title></input>
+    <br>
+    <img id="player-restartTrack" class="img-small-button" src="assets/player/restartTrack.png">
+    <img id="player-playbackToggle" class="img-small-button" src="assets/player/play.png">
+    <img id="player-playNext" class="img-small-button" src="assets/player/playNext.png" onclick="playNext()">
+    <img id="player-playbackType" class="img-small-button"
+      onclick="this.value > 0 || (this.value = 3); this.value--; this.src = 'assets/player/playback-' + this.value + '.png';">
+    <span id="player-time">
+      <span id=player-currentTime>-:--</span>/<span id=player-duration>-:--</span>
+    </span>
+  </div>
+<!--/div-->
+<br>
+<img id="temp-tagSwitcher">
+<br><br>
+<span>
+  More to come soon,<br>
+  check back later!
+</span>
