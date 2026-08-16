@@ -17,6 +17,7 @@
 body,
 div.format,
 .boxed {
+	background-color: #634631;
 	background-image: linear-gradient(#00000080), url("assets/dirt.png");
 	background-size: calc(32px * var(--scale-modifier));
 }
