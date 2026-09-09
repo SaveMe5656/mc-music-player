@@ -48,9 +48,13 @@ function main() {
 	// enable click sound for interactable page elements
 	[...document.querySelectorAll("input[type='range']"), ...document.querySelectorAll(".img-small-button"), document.getElementById("temp-tagSwitcher")]
 		.forEach(element => element.addEventListener("click", () => { click.currentTime = 0; click.play(); }));
+	// adjust click volume
+	click.volume = .25;
 
 	// init audio playback scrubber
 	player.controls.scrubber.max = 100 - 7;
+	document.getElementById("player-scrubber").onmousedown = () => player.audio.pause();
+	document.getElementById("player-scrubber").onmouseup = () => player.audio.play();
 
 	// init play/pause button
 	player.audio.onplay = () => player.controls.playbackToggle.src = "assets/player/pause.png";
